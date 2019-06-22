@@ -23,7 +23,7 @@
                 </div>
               @else
                 <div class="panel-body">
-                    No Related Data Found.
+                  No Related Data Found.
                 </div>
               @endif
             </div>

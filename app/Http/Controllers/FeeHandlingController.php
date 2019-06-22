@@ -20,17 +20,16 @@ class FeeHandlingController extends Controller {
     }
 
     public function index(){
-    	$students = User::where('role','student')->where('school_id',Auth::user()->school_id)->get();
 
     	return $this->userService->indexView('maab.registration', $this->userService->getStudents());
     	dd($this->userService->getStudents());
-    	return view('maab.registration',[
-    		'students' => $students
-          //'messageCount'=>$messageCount,
-        ]);
     }
 
     public function AddFeeForm($student_id){
-    	dd($student_id);
+    	$student = User::where('id',$student_id)->first();
+    	return view('maab.add-registration',[
+    		'student' => $student
+        ]);
+    	
     }
 }
