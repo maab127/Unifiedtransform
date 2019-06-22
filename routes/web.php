@@ -37,8 +37,12 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+//SELECT * FROM `users` WHERE  = 'student' and =52
 Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware(['auth','admin'])->group(function (){
+  Route::get('add-registration-fee', 'FeeHandlingController@index');
+  Route::get('add-user-registration-fee/{user_id}', 'FeeHandlingController@AddFeeForm');
+});
 
 Route::middleware(['auth'])->group(function (){
   Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');

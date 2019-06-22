@@ -54,6 +54,22 @@
       </li>
     </ul>
   </li>
+  <li class="nav-item dropdown">
+    <a role="button" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+        class="material-icons">date_range</i> <span class="nav-link-text">Fees Maab</span> <i class="material-icons pull-right">keyboard_arrow_down</i></a>
+    <ul class="dropdown-menu" style="width: 100%;">
+      <li class="nav-item">
+        <a class="dropdown-item" href="/add-registration-fee"><i class="material-icons">contacts</i> <span class="nav-link-text">Add Registration</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="dropdown-item" href="{{url('school/sections?att=1')}}"><i class="material-icons">contacts</i> <span
+            class="nav-link-text">Fee Voucher</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="dropdown-item" href="#"><i class="material-icons">account_balance_wallet</i> <span class="nav-link-text">Hisab Kitab Future</span></a>
+      </li>
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="{{ url('school/sections?course=1') }}"><i class="material-icons">class</i> <span class="nav-link-text">Classes
         &amp; Sections</span></a>
