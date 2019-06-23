@@ -42,6 +42,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware(['auth','admin'])->group(function (){
   Route::get('add-registration-fee', 'FeeHandlingController@index');
   Route::get('add-user-registration-fee/{user_id}', 'FeeHandlingController@AddFeeForm');
+  Route::post('store-user-registration-fee', 'FeeHandlingController@StoreFee');
 });
 
 Route::middleware(['auth'])->group(function (){

@@ -14,7 +14,7 @@
             <div class="panel panel-default">
                 <div class="page-panel-title">Register Student</div>
                 <div class="panel-body">
-                    <form action="#" method="post" class="form-horizontal">
+                    <form action="/store-user-registration-fee" method="post" class="form-horizontal">
                         {{csrf_field()}}
                         <div class="form-group">
                             <label for="name" class="col-md-4 control-label">Full Name</label>
@@ -69,6 +69,18 @@
                             <label for="name" class="col-md-4 control-label">Paper Money</label>
                             <div class="col-md-6">
                                 <input type="number" class="form-control" name="paper_fee" value="0">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="col-md-4 control-label">Summer Fund</label>
+                            <div class="col-md-6">
+                                <input type="number" class="form-control" name="summer_fee" value="0">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="col-md-4 control-label">Anual Fund</label>
+                            <div class="col-md-6">
+                                <input type="number" class="form-control" name="anual_fee" value="0">
                             </div>
                         </div>
                         <div class="form-group">

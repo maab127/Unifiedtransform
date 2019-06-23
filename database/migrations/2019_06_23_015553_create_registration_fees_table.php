@@ -24,7 +24,9 @@ class CreateRegistrationFeesTable extends Migration
             $table->integer('security_fee')->default(0);
             $table->integer('stationary_fee')->default(0);
             $table->integer('paper_fee')->default(0);
-            $table->date('admission_date')->default(0);
+            $table->integer('anual_fee')->default(0);
+            $table->integer('summer_fee')->default(0);
+            $table->date('admission_date');
             $table->timestamps();
         });
     }

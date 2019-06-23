@@ -12,7 +12,7 @@ class RegistrationFee extends Model
      * @var array
      */
     protected $fillable = [
-        'student_id', 'admission_fee', 'reg_fee', 'tuition_fee','workbook_fee','notebook_fee','security_fee','stationary_fee','paper_fee','admission_date'
+        'student_id', 'admission_fee', 'reg_fee', 'tuition_fee','workbook_fee','notebook_fee','security_fee','stationary_fee','paper_fee','admission_date','summer_fee','anual_fee'
     ];
 
 
