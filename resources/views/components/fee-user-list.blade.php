@@ -50,7 +50,11 @@
         @endif
       @endif
       <td>
-        <a class="btn btn-xs btn-success" href="{{url('add-user-registration-fee/'.$user->id)}}">Registration</a>
+        @if($user->Regfee)
+          <a class="btn btn-xs btn-success" href="{{url('edit-user-registration-fee/'.$user->id)}}">Edit Registration Fee </a>
+        @else
+          <a class="btn btn-xs btn-success" href="{{url('add-user-registration-fee/'.$user->id)}}">Registration Fee</a>
+        @endif
       </td>
     </tr>
     @endforeach

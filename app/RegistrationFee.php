@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class RegistrationFee extends Model
 {
+    protected $table = 'registration_fees';
     /**
      * The attributes that are mass assignable.
      *

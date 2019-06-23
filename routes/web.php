@@ -43,6 +43,8 @@ Route::middleware(['auth','admin'])->group(function (){
   Route::get('add-registration-fee', 'FeeHandlingController@index');
   Route::get('add-user-registration-fee/{user_id}', 'FeeHandlingController@AddFeeForm');
   Route::post('store-user-registration-fee', 'FeeHandlingController@StoreFee');
+  Route::get('edit-user-registration-fee/{user_id}', 'FeeHandlingController@EditFeeForm');
+  Route::post('update-user-registration-fee', 'FeeHandlingController@UpdateFee');
 });
 
 Route::middleware(['auth'])->group(function (){

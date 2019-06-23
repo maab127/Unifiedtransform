@@ -49,6 +49,10 @@ class User extends Model implements
         return $this->belongsTo('App\Section');
     }
 
+    public function Regfee() {
+        return $this->hasOne('App\RegistrationFee','student_id');
+    }
+
     public function school()
     {
         return $this->belongsTo('App\School');

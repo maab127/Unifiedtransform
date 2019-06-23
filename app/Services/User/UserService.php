@@ -117,7 +117,7 @@ class UserService {
     }
 
     public function getStudents(){
-        return $this->user->with(['section.class', 'school', 'studentInfo'])
+        return $this->user->with(['section.class', 'school', 'studentInfo','Regfee'])
                 ->where('code', auth()->user()->school->code)
                 ->student()
                 ->where('active', 1)
