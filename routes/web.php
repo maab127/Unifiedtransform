@@ -45,6 +45,11 @@ Route::middleware(['auth','admin'])->group(function (){
   Route::post('store-user-registration-fee', 'FeeHandlingController@StoreFee');
   Route::get('edit-user-registration-fee/{user_id}', 'FeeHandlingController@EditFeeForm');
   Route::post('update-user-registration-fee', 'FeeHandlingController@UpdateFee');
+  
+  Route::get('create-fee-voucher/{user_id}', 'FeeHandlingController@CreateFeeVoucherForm');
+  Route::post('store-fee-voucher', 'FeeHandlingController@StoreFeeVoucherForm');
+
+  Route::get('view-printed-fee-voucher/{vid}','FeeHandlingController@ViewPrintedVoucher');
 });
 
 Route::middleware(['auth'])->group(function (){

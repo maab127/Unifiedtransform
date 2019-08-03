@@ -18,6 +18,8 @@
         @break($loop->first)
       @endforeach
       <th scope="col">Registration</th>
+      <th scope="col">Fee Voucher</th>
+      <th scope="col">History</th>
     </tr>
   </thead>
   <tbody>
@@ -55,6 +57,16 @@
         @else
           <a class="btn btn-xs btn-success" href="{{url('add-user-registration-fee/'.$user->id)}}">Registration Fee</a>
         @endif
+      </td>
+      <td>
+        @if($user->Regfee)
+          <a class="btn btn-xs btn-success" href="{{url('create-fee-voucher/'.$user->id)}}">Create Voucher </a>
+        @else
+          Add Registration
+        @endif
+      </td>
+      <td>
+        <a class="btn btn-xs btn-success" href="{{url('create-fee-voucher/'.$user->id)}}">View History</a>
       </td>
     </tr>
     @endforeach
